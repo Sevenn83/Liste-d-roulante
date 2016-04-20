@@ -100,5 +100,22 @@ namespace ListeDeroulante
                 LstItems.SelectionMode = SelectionMode.MultiExtended;
             }
         }
+
+        private void btnSuppSelection_Click(object sender, System.EventArgs e)
+        {
+            LstItems.Items.Clear();
+        }
+
+        private void btnAfficheSelection_Click(object sender, System.EventArgs e)
+        {
+            string message = "";
+
+            foreach (string item in LstItems.SelectedItems)
+            {
+                message += item.ToString() + "\n";
+            }
+
+            MessageBox.Show("Element sélectionné : \n" + message);
+        }
     }
 }

@@ -80,6 +80,7 @@
             // rdBtnSimple
             // 
             this.rdBtnSimple.AutoSize = true;
+            this.rdBtnSimple.Checked = true;
             this.rdBtnSimple.Location = new System.Drawing.Point(22, 20);
             this.rdBtnSimple.Name = "rdBtnSimple";
             this.rdBtnSimple.Size = new System.Drawing.Size(56, 17);
@@ -108,6 +109,7 @@
             this.btnAfficheSelection.TabIndex = 2;
             this.btnAfficheSelection.Text = "Afficher sélection";
             this.btnAfficheSelection.UseVisualStyleBackColor = true;
+            this.btnAfficheSelection.Click += new System.EventHandler(this.btnAfficheSelection_Click);
             // 
             // btnSuppSelection
             // 
@@ -117,6 +119,7 @@
             this.btnSuppSelection.TabIndex = 3;
             this.btnSuppSelection.Text = "Supprimer sélection";
             this.btnSuppSelection.UseVisualStyleBackColor = true;
+            this.btnSuppSelection.Click += new System.EventHandler(this.btnSuppSelection_Click);
             // 
             // LstItems
             // 
