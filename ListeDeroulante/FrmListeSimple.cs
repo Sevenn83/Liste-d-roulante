@@ -79,7 +79,19 @@ namespace ListeDeroulante
 
         private void rdBtnChanged(object sender, System.EventArgs e)
         {
-
+            if (rdBtnSimple.Checked)
+            {
+                LstItems.ClearSelected();
+                LstItems.SelectionMode = SelectionMode.One;
+            } else if (rdBtnMultiple.Checked)
+            {
+                LstItems.ClearSelected();
+                LstItems.SelectionMode = SelectionMode.MultiSimple;
+            } else if (rdBtnEtendue.Checked)
+            {
+                LstItems.ClearSelected();
+                LstItems.SelectionMode = SelectionMode.MultiExtended;
+            }
         }
     }
 }
