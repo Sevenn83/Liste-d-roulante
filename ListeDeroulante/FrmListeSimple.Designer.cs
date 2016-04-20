@@ -95,6 +95,7 @@
             this.chkBoxVerrouiller.TabIndex = 1;
             this.chkBoxVerrouiller.Text = "Liste vérouillée";
             this.chkBoxVerrouiller.UseVisualStyleBackColor = true;
+            this.chkBoxVerrouiller.CheckStateChanged += new System.EventHandler(this.chkBoxVerrouiller_CheckStateChanged);
             // 
             // btnAfficheSelection
             // 

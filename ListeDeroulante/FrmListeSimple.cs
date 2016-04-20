@@ -42,5 +42,16 @@ namespace ListeDeroulante
                 TxtSaisie.Clear();
             }
         }
+
+        private void chkBoxVerrouiller_CheckStateChanged(object sender, System.EventArgs e)
+        {
+            if (chkBoxVerrouiller.CheckState == CheckState.Checked)
+            {
+                LstItems.Enabled = false;
+            } else if (chkBoxVerrouiller.CheckState == CheckState.Unchecked)
+            {
+                LstItems.Enabled = true;
+            }
+        }
     }
 }
