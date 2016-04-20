@@ -77,9 +77,9 @@ namespace ListeDeroulante
             }
         }
 
-        private void grpBoxType_Click(object sender, System.EventArgs e)
+        private void rdBtnChanged(object sender, System.EventArgs e)
         {
-            MessageBox.Show("lel");
+
         }
     }
 }

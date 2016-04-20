@@ -52,7 +52,6 @@
             this.grpBoxType.TabIndex = 0;
             this.grpBoxType.TabStop = false;
             this.grpBoxType.Text = "Type de sélection";
-            this.grpBoxType.Click += new System.EventHandler(this.grpBoxType_Click);
             // 
             // rdBtnEtendue
             // 
@@ -64,6 +63,7 @@
             this.rdBtnEtendue.TabStop = true;
             this.rdBtnEtendue.Text = "Etendue";
             this.rdBtnEtendue.UseVisualStyleBackColor = true;
+            this.rdBtnEtendue.Click += new System.EventHandler(this.rdBtnChanged);
             // 
             // rdBtnMultiple
             // 
@@ -75,6 +75,7 @@
             this.rdBtnMultiple.TabStop = true;
             this.rdBtnMultiple.Text = "Multiple";
             this.rdBtnMultiple.UseVisualStyleBackColor = true;
+            this.rdBtnMultiple.Click += new System.EventHandler(this.rdBtnChanged);
             // 
             // rdBtnSimple
             // 
@@ -86,6 +87,7 @@
             this.rdBtnSimple.TabStop = true;
             this.rdBtnSimple.Text = "Simple";
             this.rdBtnSimple.UseVisualStyleBackColor = true;
+            this.rdBtnSimple.Click += new System.EventHandler(this.rdBtnChanged);
             // 
             // chkBoxVerrouiller
             // 
