@@ -27,6 +27,19 @@ namespace ListeDeroulante
             if (string.IsNullOrWhiteSpace(TxtSaisie.Text))
             {
                 MessageBox.Show("Rien à ajouter dans la liste");
+            } else
+            {
+                LstItems.Items.Add(TxtSaisie.Text);
+                TxtSaisie.Clear();
+            }
+        }
+
+        private void TxtSaisie_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAjouter_Click(this, new System.EventArgs());
+                TxtSaisie.Clear();
             }
         }
     }

@@ -128,6 +128,7 @@
             this.TxtSaisie.Name = "TxtSaisie";
             this.TxtSaisie.Size = new System.Drawing.Size(236, 20);
             this.TxtSaisie.TabIndex = 5;
+            this.TxtSaisie.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSaisie_KeyDown);
             // 
             // btnAjouter
             // 
