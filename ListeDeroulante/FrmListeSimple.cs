@@ -70,9 +70,11 @@ namespace ListeDeroulante
         {
             if (chkBoxVerrouiller.CheckState == CheckState.Checked)
             {
+                LstItems.ClearSelected();
                 LstItems.Enabled = false;
             } else if (chkBoxVerrouiller.CheckState == CheckState.Unchecked)
             {
+                LstItems.ClearSelected();
                 LstItems.Enabled = true;
             }
         }
