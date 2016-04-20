@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.grpBoxType = new System.Windows.Forms.GroupBox();
-            this.rdBtnSimple = new System.Windows.Forms.RadioButton();
-            this.rdBtnMultiple = new System.Windows.Forms.RadioButton();
             this.rdBtnEtendue = new System.Windows.Forms.RadioButton();
+            this.rdBtnMultiple = new System.Windows.Forms.RadioButton();
+            this.rdBtnSimple = new System.Windows.Forms.RadioButton();
             this.chkBoxVerrouiller = new System.Windows.Forms.CheckBox();
             this.btnAfficheSelection = new System.Windows.Forms.Button();
             this.btnSuppSelection = new System.Windows.Forms.Button();
@@ -53,16 +53,16 @@
             this.grpBoxType.TabStop = false;
             this.grpBoxType.Text = "Type de sélection";
             // 
-            // rdBtnSimple
+            // rdBtnEtendue
             // 
-            this.rdBtnSimple.AutoSize = true;
-            this.rdBtnSimple.Location = new System.Drawing.Point(22, 20);
-            this.rdBtnSimple.Name = "rdBtnSimple";
-            this.rdBtnSimple.Size = new System.Drawing.Size(56, 17);
-            this.rdBtnSimple.TabIndex = 0;
-            this.rdBtnSimple.TabStop = true;
-            this.rdBtnSimple.Text = "Simple";
-            this.rdBtnSimple.UseVisualStyleBackColor = true;
+            this.rdBtnEtendue.AutoSize = true;
+            this.rdBtnEtendue.Location = new System.Drawing.Point(22, 65);
+            this.rdBtnEtendue.Name = "rdBtnEtendue";
+            this.rdBtnEtendue.Size = new System.Drawing.Size(65, 17);
+            this.rdBtnEtendue.TabIndex = 2;
+            this.rdBtnEtendue.TabStop = true;
+            this.rdBtnEtendue.Text = "Etendue";
+            this.rdBtnEtendue.UseVisualStyleBackColor = true;
             // 
             // rdBtnMultiple
             // 
@@ -75,16 +75,16 @@
             this.rdBtnMultiple.Text = "Multiple";
             this.rdBtnMultiple.UseVisualStyleBackColor = true;
             // 
-            // rdBtnEtendue
+            // rdBtnSimple
             // 
-            this.rdBtnEtendue.AutoSize = true;
-            this.rdBtnEtendue.Location = new System.Drawing.Point(22, 65);
-            this.rdBtnEtendue.Name = "rdBtnEtendue";
-            this.rdBtnEtendue.Size = new System.Drawing.Size(65, 17);
-            this.rdBtnEtendue.TabIndex = 2;
-            this.rdBtnEtendue.TabStop = true;
-            this.rdBtnEtendue.Text = "Etendue";
-            this.rdBtnEtendue.UseVisualStyleBackColor = true;
+            this.rdBtnSimple.AutoSize = true;
+            this.rdBtnSimple.Location = new System.Drawing.Point(22, 20);
+            this.rdBtnSimple.Name = "rdBtnSimple";
+            this.rdBtnSimple.Size = new System.Drawing.Size(56, 17);
+            this.rdBtnSimple.TabIndex = 0;
+            this.rdBtnSimple.TabStop = true;
+            this.rdBtnSimple.Text = "Simple";
+            this.rdBtnSimple.UseVisualStyleBackColor = true;
             // 
             // chkBoxVerrouiller
             // 
@@ -137,6 +137,7 @@
             this.btnAjouter.TabIndex = 6;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // FrmListSimple
             // 
@@ -154,6 +155,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmListSimple";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmListSimple_Load);
             this.grpBoxType.ResumeLayout(false);
             this.grpBoxType.PerformLayout();
             this.ResumeLayout(false);
