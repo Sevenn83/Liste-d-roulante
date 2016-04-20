@@ -103,6 +103,7 @@
             // 
             // btnAfficheSelection
             // 
+            this.btnAfficheSelection.Enabled = false;
             this.btnAfficheSelection.Location = new System.Drawing.Point(49, 218);
             this.btnAfficheSelection.Name = "btnAfficheSelection";
             this.btnAfficheSelection.Size = new System.Drawing.Size(159, 37);
@@ -113,6 +114,7 @@
             // 
             // btnSuppSelection
             // 
+            this.btnSuppSelection.Enabled = false;
             this.btnSuppSelection.Location = new System.Drawing.Point(49, 261);
             this.btnSuppSelection.Name = "btnSuppSelection";
             this.btnSuppSelection.Size = new System.Drawing.Size(159, 37);
@@ -128,6 +130,7 @@
             this.LstItems.Name = "LstItems";
             this.LstItems.Size = new System.Drawing.Size(236, 238);
             this.LstItems.TabIndex = 4;
+            this.LstItems.SelectedIndexChanged += new System.EventHandler(this.LstItems_SelectedIndexChanged);
             // 
             // TxtSaisie
             // 
@@ -135,10 +138,12 @@
             this.TxtSaisie.Name = "TxtSaisie";
             this.TxtSaisie.Size = new System.Drawing.Size(236, 20);
             this.TxtSaisie.TabIndex = 5;
+            this.TxtSaisie.TextChanged += new System.EventHandler(this.TxtSaisie_TextChanged);
             this.TxtSaisie.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSaisie_KeyDown);
             // 
             // btnAjouter
             // 
+            this.btnAjouter.Enabled = false;
             this.btnAjouter.Location = new System.Drawing.Point(270, 283);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(159, 37);
@@ -162,7 +167,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmListSimple";
-            this.Text = "Form1";
+            this.Text = "Liste déroulante";
             this.Load += new System.EventHandler(this.FrmListSimple_Load);
             this.grpBoxType.ResumeLayout(false);
             this.grpBoxType.PerformLayout();

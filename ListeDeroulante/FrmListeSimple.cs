@@ -103,7 +103,10 @@ namespace ListeDeroulante
 
         private void btnSuppSelection_Click(object sender, System.EventArgs e)
         {
-            LstItems.Items.Clear();
+            while(LstItems.SelectedItems.Count > 0)
+            {
+                LstItems.Items.RemoveAt(LstItems.SelectedIndex);
+            }
         }
 
         private void btnAfficheSelection_Click(object sender, System.EventArgs e)
@@ -116,6 +119,30 @@ namespace ListeDeroulante
             }
 
             MessageBox.Show("Element sélectionné : \n" + message);
+        }
+
+        private void LstItems_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (LstItems.SelectedItems.Count > 0)
+            {
+                btnAfficheSelection.Enabled = true;
+                btnSuppSelection.Enabled = true;
+            } else
+            {
+                btnAfficheSelection.Enabled = false;
+                btnSuppSelection.Enabled = false;
+            }
+        }
+        private void TxtSaisie_TextChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(TxtSaisie.Text))
+            {
+                btnAjouter.Enabled = true;
+            }
+            else
+            {
+                btnAjouter.Enabled = false;
+            }
         }
     }
 }
