@@ -5,6 +5,9 @@ namespace ListeDeroulante
 {
     public partial class FrmListSimple : Form
     {
+        /// <summary>
+        /// Liste contenant les noms à afficher au lancement du programme
+        /// </summary>
         private string[] noms = new string[] { "Marie", "Jean", "Pierre", "Julien", "François", "Hélène" };
 
         public FrmListSimple()
@@ -12,6 +15,11 @@ namespace ListeDeroulante
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Charge les noms dans la liste au lancement du programme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmListSimple_Load(object sender, System.EventArgs e)
         {
             List<string> noms = new List<string>(this.noms);
@@ -22,6 +30,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Ajoute un élement à la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjouter_Click(object sender, System.EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtSaisie.Text))
@@ -34,6 +47,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Permet de prendre en charge l'utilisation de enter pour entrer un élement dans la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtSaisie_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -43,6 +61,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Permet de verouiller la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkBoxVerrouiller_CheckStateChanged(object sender, System.EventArgs e)
         {
             if (chkBoxVerrouiller.CheckState == CheckState.Checked)
