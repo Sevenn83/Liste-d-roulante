@@ -24,7 +24,7 @@ namespace ListeDeroulante
 
         private void btnAjouter_Click(object sender, System.EventArgs e)
         {
-            if (TxtSaisie.Text.Trim() == "")
+            if (string.IsNullOrWhiteSpace(TxtSaisie.Text))
             {
                 MessageBox.Show("Rien à ajouter dans la liste");
             }
