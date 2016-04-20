@@ -76,5 +76,10 @@ namespace ListeDeroulante
                 LstItems.Enabled = true;
             }
         }
+
+        private void grpBoxType_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("lel");
+        }
     }
 }

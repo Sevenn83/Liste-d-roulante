@@ -52,6 +52,7 @@
             this.grpBoxType.TabIndex = 0;
             this.grpBoxType.TabStop = false;
             this.grpBoxType.Text = "Type de sélection";
+            this.grpBoxType.Click += new System.EventHandler(this.grpBoxType_Click);
             // 
             // rdBtnEtendue
             // 
