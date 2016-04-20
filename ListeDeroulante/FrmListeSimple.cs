@@ -41,7 +41,7 @@ namespace ListeDeroulante
         /// <param name="e"></param>
         private void btnAjouter_Click(object sender, System.EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtSaisie.Text))
+            if (string.IsNullOrWhiteSpace(TxtSaisie.Text) && string.IsNullOrWhiteSpace(TxtSaisie.Text))
             {
                 MessageBox.Show("Rien à ajouter dans la liste");
             } else
@@ -59,7 +59,7 @@ namespace ListeDeroulante
         /// <param name="e"></param>
         private void TxtSaisie_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter & !string.IsNullOrWhiteSpace(TxtSaisie.Text))
             {
                 btnAjouter_Click(this, new System.EventArgs());
                 TxtSaisie.Clear();
