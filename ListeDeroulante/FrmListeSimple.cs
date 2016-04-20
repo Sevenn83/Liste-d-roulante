@@ -84,6 +84,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Permet de définir le mode de sélection de la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rdBtnChanged(object sender, System.EventArgs e)
         {
             if (rdBtnSimple.Checked)
@@ -101,6 +106,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Supprime tout les élements sélectionnés de la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSuppSelection_Click(object sender, System.EventArgs e)
         {
             while(LstItems.SelectedItems.Count > 0)
@@ -109,6 +119,11 @@ namespace ListeDeroulante
             }
         }
 
+        /// <summary>
+        /// Affiche les élements sélectionnés
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAfficheSelection_Click(object sender, System.EventArgs e)
         {
             string message = "";
@@ -121,6 +136,12 @@ namespace ListeDeroulante
             MessageBox.Show("Element sélectionné : \n" + message);
         }
 
+
+        /// <summary>
+        /// Active ou non les boutons d'affiche et de suppression si il y a une sélection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LstItems_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             if (LstItems.SelectedItems.Count > 0)
@@ -133,6 +154,12 @@ namespace ListeDeroulante
                 btnSuppSelection.Enabled = false;
             }
         }
+
+        /// <summary>
+        /// Active/Desactive le bouton ajouter si le champs de text et vide ou non
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtSaisie_TextChanged(object sender, System.EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(TxtSaisie.Text))
