@@ -28,6 +28,10 @@ namespace ListeDeroulante
             {
                 LstItems.Items.Add(nom);
             }
+
+            // Place le focus à l'ouverture du programme
+            this.ActiveControl = TxtSaisie;
+
         }
 
         /// <summary>
@@ -44,6 +48,7 @@ namespace ListeDeroulante
             {
                 LstItems.Items.Add(TxtSaisie.Text);
                 TxtSaisie.Clear();
+                TxtSaisie.Focus();
             }
         }
 
